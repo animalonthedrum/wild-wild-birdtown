@@ -1,0 +1,142 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    label {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        font-size: 24px;
+        line-height: 1;
+        margin: 20px 0 10px 0;
+        text-align: center;
+        i{
+            font-size: 14px;
+          
+        }
+    }
+    select, input, textarea {
+        border: 2px solid black;
+        // -webkit-appearance: none;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        background-color: #fff;
+        box-shadow: 0 3px 0 rgba(0,0,0,.05);
+    }
+    select{
+           -webkit-appearance: none;
+    }
+    .submit {
+        background-image: url('./images/solo_cloud.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        -webkit-appearance: none;
+        width: 250px;
+        height: 150px;
+        -webkit-appearance: none;
+        background-color: transparent;
+        font-size: 3vw;
+        margin-top: 20px;
+        text-transform: uppercase;
+        opacity: 1;
+        &:disabled {
+            opacity: 0.1;
+        }
+    }
+}
+
+.select {
+    position: relative;
+    border: 2px solid black;
+    // -webkit-appearance: none;
+    border-radius: 20px;
+    height: auto;
+    background: white;
+    box-shadow: 0 3px 0 rgba(0,0,0,.05);
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+      right: 10px;
+      bottom: 0;
+      margin: auto;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #000 transparent transparent transparent;
+      pointer-events: none;
+    }
+    
+    // &:before {
+    // //   width: 30px;
+    //   position: absolute;
+    //   top: 1px;
+    //   right: 1px;
+    //   bottom: 1px;
+    //   background: transparent;
+    //   content: '';
+    //   pointer-events: none;
+    // }
+    
+    // &:hover {
+    //   &:before {
+    //     background: transparent;
+    //   }
+    // }
+    
+    select {
+      border: none;
+      box-shadow: none;
+      border-radius: 20px;
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+    //   padding-right: 35px;
+    //   padding-left: 15px;
+  
+      // Disable default styling on ff
+      -moz-appearance: none;
+      
+      // Disable ugly ass outline on firefox 
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      } 
+      
+      // Disable default styling on webkit browsers 
+      -webkit-appearance: none;
+      
+      // Disable default arrow on IE 11+
+      &::-ms-expand {
+        display: none;
+      }
+      
+    //   &:focus {  
+    //     // border-color: #63ffb4;    
+    //   }
+    }
+  }
+  
+  // IE 9 only 
+  @media all and (min-width:0\0) and (min-resolution:.001dpcm){
+    .select{ 
+      select {
+        padding-right: 0;
+      }
+  
+      &:after, &:before {
+        display: none;
+      }
+    }
+  }
+
